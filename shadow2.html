@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Shadows, Text Effects, Animations, and Transitions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #00509e;
+        }
+
+        .container {
+            margin-bottom: 50px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+        }
+
+        .text {
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .box-animation {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 20px 0;
+            animation: moveRight 2s ease-in-out infinite;
+        }
+
+        @keyframes moveRight {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(100px);
+            }
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-50px); }
+            100% { transform: translateY(0); }
+        }
+
+        .loader {
+            /* width: 50px;
+            height: 50px;
+            border: 5px solid lightgray;
+            border-top: 5px solid blue;
+            border-radius: 50%; */
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            animation: spin 1s linear infinite;
+            margin: 20px 0;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .card-animation {
+            width: 200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .card-animation:hover {
+            transform: scale(1.1);
+            animation: shadowPulse 0.5s infinite;
+        }
+
+        @keyframes shadowPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Shadows, Text Effects, Animations, and Transitions</h1>
+
+    <div class="container">
+        <h2>Box Shadow Example</h2>
+        <div class="box"></div>
+    </div>
+
+    <div class="container">
+        <h2>Text Shadow Example</h2>
+        <div class="text">Shadowed Text</div>
+    </div>
+
+    <div class="container">
+        <h2>Hover Shadow Effect on Card</h2>
+        <div class="card">Hover over me!</div>
+    </div>
+
+    <div class="container">
+        <h2>Button with Transition</h2>
+        <a href="#" class="button">Hover me!</a>
+    </div>
+
+    <div class="container">
+        <h2>Simple Animation Example</h2>
+        <div class="box-animation"></div>
+    </div>
+
+    <div class="container">
+        <h2>Bouncing Ball Animation</h2>
+        <div class="ball"></div>
+    </div>
+
+    <div class="container">
+        <h2>Spinning Loader Animation</h2>
+        <div class="loader"></div>
+    </div>
+
+    <div class="container">
+        <h2>Combined Hover and Animation Example</h2>
+        <div class="card-animation">Hover over me!</div>
+    </div>
+
+</body>
+</html>
